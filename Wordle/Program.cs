@@ -23,6 +23,7 @@ namespace Wordle
                 } while (!isRightWord) ;
                 
                 CompareGuess(userGuess, word);
+                if (userGuess == word) return;
                 guesses--;
                 guessed.Add(userGuess);
                 Console.WriteLine($"\n{guesses} guesses left\n");
